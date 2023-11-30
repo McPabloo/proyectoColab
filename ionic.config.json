@@ -1,0 +1,7 @@
+{
+  "name": "proyectoColab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
