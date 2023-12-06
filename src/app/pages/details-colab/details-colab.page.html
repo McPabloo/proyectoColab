@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Colaborador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngIf="colaboradorDetails">
+    <ion-label>
+      <h1>{{colaboradorDetails.strName}} {{colaboradorDetails.strLastname}}
+        {{colaboradorDetails.strLastname2}}</h1>
+      <p>Nombre del colaborador</p>
+    </ion-label>
+  </ion-item>
+
+
+  <ion-card *ngIf="colaboradorDetails">
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item>
+          <ion-icon aria-hidden="true" name="mail" slot="start"></ion-icon>
+          <ion-label>{{ colaboradorDetails.strEmail }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon aria-hidden="true" name="code-working-outline" slot="start"></ion-icon>
+          <ion-label>{{ colaboradorDetails.strRol }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon aria-hidden="true" name="call" slot="start"></ion-icon>
+          <ion-label>{{ colaboradorDetails.intPhone }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4"><strong>Nombre de Habilidad</strong></ion-col>
+          <ion-col size="4"><strong>Nivel</strong></ion-col>
+          <ion-col size="4"><strong>Experiencia</strong></ion-col>
+        </ion-row>
+        <ion-row *ngFor="let skill of colaboradorDetails.arraySkills">
+          <ion-col size="4">{{ skill.strNameSkill }}</ion-col>
+          <ion-col size="4">{{ skill.strLevel }}</ion-col>
+          <ion-col size="4">{{ skill.intExperience }} años</ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

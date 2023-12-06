@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  margin-top: 20%;
+  margin-bottom: 4%;
+  padding: 4%;
+}
+
+.form {
+  width: 80%; /* Ajusta el ancho del formulario */
+  max-width: 300px; /* Ancho máximo del formulario */
+  margin-bottom: 20px; /* Espaciado entre el formulario y el botón */
+}
+
+.login-button {
+  width: 80%; /* Ajusta el ancho del botón */
+  max-width: 300px; /* Ancho máximo del botón */
+}
